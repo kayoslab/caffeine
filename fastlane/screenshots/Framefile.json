@@ -1,0 +1,44 @@
+{
+  "device_frame_version": "latest",
+  "default": {
+    "background": "./background.jpg",
+    "padding": 50,
+    "show_complete_frame": false,
+    "stack_title" : false,
+    "title_below_image": false,
+    "frame": "WHITE",
+    "use_platform": "IOS"
+  },
+  "data": [
+    {
+      "filter": "Consumption",
+      "title": {
+        "color": "#ffffff"
+      }
+    },
+    {
+      "filter": "Input",
+      "title": {
+        "color": "#ffffff"
+      }
+    },
+    {
+      "filter": "Daily",
+      "title": {
+        "color": "#ffffff"
+      }
+    },
+    {
+      "filter": "Monthly",
+      "title": {
+        "color": "#ffffff"
+      }
+    },
+    {
+      "filter": "Settings",
+      "title": {
+        "color": "#ffffff"
+      }
+    }
+  ]
+}

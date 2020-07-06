@@ -1,0 +1,21 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf0 "The Half Life of Caffeine in healthy adults is about 5.7 hours"[1].\
+"However, at higher doses (e.g. 250\'96500mg single dose), the clearance of caffeine is significantly reduced and its elimination half-life is prolonged, indicating non-linearity"[2]\
+"The t1/2 (beta) was significantly prolonged in women on OCS (10.7 +/- 3.0 hr vs. 6.2 +/- 1.6)"[3]\
+\
+
+\f1\b These three Predicates are the base of our caffeine calculation.\
+\
+
+\f0\b0 First of all we have to determine the amount of ingested caffeine. According to Source[2] the t1/2 can be described by a non linear function. At the Moment my solution is indeed deterministic, but not reliable at all. The current calculation returns a value between 20270 seconds and 32000 seconds to halve a ingested dose of caffeine.\
+\
+\
+Sources:\
+[1]: {\field{\*\fldinst{HYPERLINK "http://www.ncbi.nlm.nih.gov/pubmed/7361718?dopt=Abstract"}}{\fldrslt http://www.ncbi.nlm.nih.gov/pubmed/7361718?dopt=Abstract}}\
+[2]: {\field{\*\fldinst{HYPERLINK "http://www.militaryenergygum.com/wp-content/uploads/Multiple-Dose-Pharmacokinetics.pdf"}}{\fldrslt http://www.militaryenergygum.com/wp-content/uploads/Multiple-Dose-Pharmacokinetics.pdf}}\
+[3]: {\field{\*\fldinst{HYPERLINK "http://www.ncbi.nlm.nih.gov/pubmed/7359014"}}{\fldrslt http://www.ncbi.nlm.nih.gov/pubmed/7359014}}}

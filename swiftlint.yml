@@ -1,0 +1,68 @@
+# entries after this are temporarily added. Remove one by one and fix!
+# testing jenkins
+disabled_rules:
+
+opt_in_rules:
+ - nesting
+ - redundant_optional_initialization
+ - closure_end_indentation
+ - contains_over_first_not_nil
+ - empty_parameters
+ - force_unwrapping
+
+# autocorrect:
+ - explicit_init
+ - closure_spacing
+ - operator_usage_whitespace
+
+# manually:
+ - empty_count
+ - private_outlet
+ - private_action
+ - private_over_fileprivate
+ - implicitly_unwrapped_optional
+ - let_var_whitespace
+ - yoda_condition
+ - first_where
+ - for_where
+ - multiline_arguments
+ - multiline_arguments_brackets
+ - multiline_function_chains
+ - multiline_literal_brackets
+ - multiple_closures_with_trailing_closure
+ - no_space_in_method_call
+
+excluded:
+ - Pods
+ - Templates
+ - GMRChat
+ - Frameworks
+ - GMRUnitTests
+ 
+# make it difficult to forget
+force_unwrapping: warning
+force_cast: error
+implicitly_unwrapped_optional: error
+multiline_arguments: error
+multiline_arguments_brackets: error
+multiline_function_chains: error
+multiline_literal_brackets: error
+multiple_closures_with_trailing_closure: error
+no_space_in_method_call: error
+private_outlet: error
+private_action: error
+private_over_fileprivate: error
+
+cyclomatic_complexity:
+  - 20 # warning
+  - 30 # error
+type_body_length:
+  - 450 # warning
+  - 600 # error
+function_body_length:
+  - 100 # warning
+  - 200 # error
+file_length:
+  - 600 # warning
+  - 1000 # error
+

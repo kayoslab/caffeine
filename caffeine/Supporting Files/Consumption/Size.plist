@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>noSize</string>
+		<key>volume</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>small</string>
+		<key>volume</key>
+		<integer>150</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>medium</string>
+		<key>volume</key>
+		<integer>200</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>large</string>
+		<key>volume</key>
+		<integer>250</integer>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,18 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Actions.md
+# can also be listed using the `fastlane actions` command
+# All lines starting with a # are ignored when running `fastlane`
+default_platform :ios
+
+platform :ios do
+  desc "Creates new screenshots and uploads them to iTunes Connect"
+  lane :screens do
+    snapshot
+    frame
+  end
+
+  lane :frame do
+    frameit(path: "./fastlane/screenshots")
+  end
+end
