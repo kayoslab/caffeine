@@ -82,7 +82,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         alertController.addAction(okAction)
 
-        DrinksService.shared.drink(shortcutItem.consumable)
+        // Store the drink with a new date.
+        DrinksService.shared.drink(
+            .init(
+                coffee: shortcutItem.consumable.coffee,
+                milk: shortcutItem.consumable.milk,
+                size: shortcutItem.consumable.size,
+                sugar: shortcutItem.consumable.sugar,
+                date: .init()
+            )
+        )
         window?.rootViewController?.present(
             alertController,
             animated: true,

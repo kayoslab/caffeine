@@ -58,7 +58,17 @@ class ConsumptionViewController: UIViewController {
     private func recentButtonTouch(_ recent: Int) {
         let recentConsumables = DrinksService.shared.getRecentDrinks()
         let recentConsumable = recentConsumables[recent]
-        DrinksService.shared.drink(recentConsumable)
+        
+        // Store the drink with a new date.
+        DrinksService.shared.drink(
+            .init(
+                coffee: recentConsumable.coffee,
+                milk: recentConsumable.milk,
+                size: recentConsumable.size,
+                sugar: recentConsumable.sugar,
+                date: .init()
+            )
+        )
 
         let alertController = UIAlertController(
             title: "\(NSLocalizedString("ShortcutHeading", comment: ""))",
