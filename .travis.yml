@@ -3,17 +3,5 @@ language:
 
 osx_image: xcode11.5
 
-podfile: Podfile
-
-cache:
-  directories:
-    - $HOME/.cocoapods/
-
-before_install:
-- bundle install
-
-install:
-- pod outdated | awk '{ if ( $1 ~ /^-/ ) { print $0 } }' | awk '{ if ( $3 != $5 ) { pod update $2 } else { print "No updated needed it for" $2 } }
-
 script:
   - xcodebuild test -workspace ./caffeine.xcworkspace -scheme caffeine -enableCodeCoverage YES ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,OS=13.5,name=iPhone 11 Pro'
