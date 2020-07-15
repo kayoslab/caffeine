@@ -17,6 +17,7 @@
 		601FAA291BAC52D200553555 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601FAA271BAC52D200553555 /* InputViewController.swift */; };
 		601FAA2A1BAC52D200553555 /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601FAA281BAC52D200553555 /* ConsumptionViewController.swift */; };
 		601FAA2C1BAC52E300553555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601FAA2B1BAC52E300553555 /* AppDelegate.swift */; };
+		6025626324BEF31600EF6054 /* Matchfile in Resources */ = {isa = PBXBuildFile; fileRef = 6025626224BEF31600EF6054 /* Matchfile */; };
 		602E64E51BAC3C6C00E25D52 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 602E64E41BAC3C6C00E25D52 /* HealthKit.framework */; };
 		603DEE0424AB7C640079A79C /* HealthStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603DEE0324AB7C640079A79C /* HealthStoreService.swift */; };
 		603DEE0D24AB87030079A79C /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603DEE0C24AB87030079A79C /* UserSettings.swift */; };
@@ -84,6 +85,7 @@
 		601FAA271BAC52D200553555 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputViewController.swift; path = ViewController/InputViewController.swift; sourceTree = "<group>"; };
 		601FAA281BAC52D200553555 /* ConsumptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConsumptionViewController.swift; path = ViewController/ConsumptionViewController.swift; sourceTree = "<group>"; };
 		601FAA2B1BAC52E300553555 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6025626224BEF31600EF6054 /* Matchfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Matchfile; path = fastlane/Matchfile; sourceTree = SOURCE_ROOT; };
 		602E64A71BAC1BDF00E25D52 /* caffeine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = caffeine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		602E64B81BAC1BDF00E25D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		602E64E41BAC3C6C00E25D52 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -279,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				6043D1B324BEDD10002608EB /* Fastfile */,
+				6025626224BEF31600EF6054 /* Matchfile */,
 				6043D1B624BEDD2D002608EB /* Snapfile */,
 			);
 			name = Fastlane;
@@ -532,6 +535,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6025626324BEF31600EF6054 /* Matchfile in Resources */,
 				600647E01BAE0A3D00101295 /* Size.plist in Resources */,
 				6043D1D324BEDFAD002608EB /* LaunchScreen.storyboard in Resources */,
 				600647DA1BAE0A0E00101295 /* Coffee.plist in Resources */,
@@ -835,8 +839,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = caffeine/caffeine.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution: Simon Krüger (T2MU43SWN2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Simon Krüger (T2MU43SWN2)";
+				CODE_SIGN_IDENTITY = "Apple Development: Simon Krüger (ZHJYL9DGF3)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -849,7 +852,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.cr0ss.caffeine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "Caffeine AppStore";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development org.cr0ss.caffeine";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -862,7 +865,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = caffeine/caffeine.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: Simon Krüger (T2MU43SWN2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Simon Krüger (T2MU43SWN2)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T2MU43SWN2;
@@ -874,7 +876,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.cr0ss.caffeine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "Caffeine AppStore";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore org.cr0ss.caffeine";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
