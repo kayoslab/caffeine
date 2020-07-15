@@ -5,6 +5,7 @@ class UICaffeineInputButtonView: UIView {
 
     override init (frame: CGRect) {
         super.init(frame: frame)
+
         setUpView()
     }
 
@@ -14,6 +15,7 @@ class UICaffeineInputButtonView: UIView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+
         setUpView()
     }
 

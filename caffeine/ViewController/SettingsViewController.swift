@@ -61,6 +61,7 @@ class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupSlider()
     }
 
@@ -152,6 +153,7 @@ class SettingsViewController: UIViewController {
 
     private  func getNewConstantPositionForSender(_ sender: UICaffeineSlider?) -> CGFloat {
         guard let sender = sender else { return 0.0 }
+
         let valueMargin = sender.maximumValue - sender.minimumValue
         let differenceFromRefferencepoint = Double(sender.value - ((valueMargin / 2) + sender.minimumValue))
         let percentage: Double = differenceFromRefferencepoint / Double(valueMargin / 2)

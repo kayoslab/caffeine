@@ -37,15 +37,15 @@ enum Coffee: Int, Codable {
     case tripleShot
 
     var localizedTitle: String {
-        switch(self) {
+        switch self {
         case .noShot:
-            return NSLocalizedString("noshot", comment: "")
+            return L10n.noshot
         case .singleShot:
-            return NSLocalizedString("singleshot", comment: "")
+            return L10n.singleshot
         case .doubleShot:
-            return NSLocalizedString("doubleshot", comment: "")
+            return L10n.doubleshot
         case .tripleShot:
-            return NSLocalizedString("tripleshot", comment: "")
+            return L10n.tripleshot
         }
     }
 }
@@ -57,15 +57,15 @@ enum Milk: Int, Codable {
     case soyMilk
 
     var localizedTitle: String {
-        switch(self) {
+        switch self {
         case .black:
-            return NSLocalizedString("black", comment: "")
+            return L10n.black
         case .lactoseFree:
-            return NSLocalizedString("lactosefree", comment: "")
+            return L10n.lactosefree
         case .fullFat:
-            return NSLocalizedString("fullfat", comment: "")
+            return L10n.fullfat
         case .soyMilk:
-            return NSLocalizedString("soymilk", comment: "")
+            return L10n.soymilk
         }
     }
 }
@@ -77,20 +77,20 @@ enum Size: Int, Codable {
     case large
 
     var localizedTitle: String {
-        switch(self) {
+        switch self {
         case .noSize:
-            return NSLocalizedString("nosize", comment: "")
+            return L10n.nosize
         case .small:
-            return NSLocalizedString("small", comment: "")
+            return L10n.small
         case .medium:
-            return NSLocalizedString("medium", comment: "")
+            return L10n.medium
         case .large:
-            return NSLocalizedString("large", comment: "")
+            return L10n.large
         }
     }
 
     var imageName: String {
-        switch(self) {
+        switch self {
         case .noSize:
             return "quickShot"
         case .small:
@@ -103,7 +103,7 @@ enum Size: Int, Codable {
     }
 
     var imageNameSelected: String {
-        switch(self) {
+        switch self {
         case .noSize:
             return "quickShotPressed"
         case .small:
@@ -123,15 +123,15 @@ enum Sugar: Int, Codable {
     case threePieces
 
     var localizedTitle: String {
-        switch(self) {
+        switch self {
         case .noSugar:
-            return NSLocalizedString("nosugar", comment: "")
+            return L10n.nosugar
         case .singlePiece:
-            return NSLocalizedString("singlepiece", comment: "")
+            return L10n.singlepiece
         case .twoPieces:
-            return NSLocalizedString("twopiece", comment: "")
+            return L10n.twopiece
         case .threePieces:
-            return NSLocalizedString("threepiece", comment: "")
+            return L10n.threepiece
         }
     }
 }

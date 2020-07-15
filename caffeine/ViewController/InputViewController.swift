@@ -22,7 +22,7 @@ class InputViewController: UIViewController {
     private var cupSender: UICaffeineInputButton?
     private var sugarSender: UICaffeineInputButton?
 
-    @IBOutlet var inputOKButton: UICaffeineInputOKButton?
+    @IBOutlet private var inputOKButton: UICaffeineInputOKButton?
 
     // MARK: Input Shot, Milk, Cupsize and Sugar IBActions
     @IBAction private func oneShotIconClicked(_ sender: UICaffeineInputButton) {
@@ -195,6 +195,7 @@ class InputViewController: UIViewController {
 
     private func buttonTap(_ sender: UICaffeineInputButton?, animated: Bool) {
         guard let sender = sender else { return }
+
         sender.tapAnimation(animated)
     }
 }

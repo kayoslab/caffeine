@@ -13,6 +13,7 @@ class UICaffeineConsumptionRecentButton: UIButton {
 
     override init (frame: CGRect) {
         super.init(frame: frame)
+
         setUpView()
     }
 
@@ -22,6 +23,7 @@ class UICaffeineConsumptionRecentButton: UIButton {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+
         setUpView()
     }
 
@@ -48,6 +50,7 @@ class UICaffeineConsumptionRecentButton: UIButton {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+
         self.mainLabel.textColor = UIColor.darkGray
         self.subtitleLabel.textColor = UIColor.darkGray
         self.cupIcon.image = UIImage(named: cupState.imageNameSelected)
@@ -56,6 +59,7 @@ class UICaffeineConsumptionRecentButton: UIButton {
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
+
         self.mainLabel.textColor = CaffeineColors.consumptionButton.color
         self.subtitleLabel.textColor = UIColor.white
         self.cupIcon.image = UIImage(named: cupState.imageName)
@@ -64,6 +68,7 @@ class UICaffeineConsumptionRecentButton: UIButton {
 
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
+
         self.mainLabel.textColor = CaffeineColors.consumptionButton.color
         self.subtitleLabel.textColor = UIColor.white
         self.cupIcon.image = UIImage(named: cupState.imageName)

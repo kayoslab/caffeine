@@ -57,7 +57,10 @@ class UICaffeineStatisticsChartView: UIView {
                 let intersectHeight = (bounds.height - bottomBorder - topBorder)
                 let intersectPath = UIBezierPath()
 
-                let intersectStartPoint = CGPoint(x: columnXPoint(index * intersectDistance), y: bounds.height - bottomBorder)
+                let intersectStartPoint = CGPoint(
+                    x: columnXPoint(index * intersectDistance),
+                    y: bounds.height - bottomBorder
+                )
                 let intersectEndPoint = CGPoint(x: intersectStartPoint.x, y: intersectStartPoint.y - intersectHeight)
                 intersectPath.move(to: intersectStartPoint)
                 intersectPath.addLine(to: intersectEndPoint)
@@ -66,34 +69,37 @@ class UICaffeineStatisticsChartView: UIView {
                 intersectPath.lineWidth = 1.0
                 intersectPath.stroke()
 
-                //2 - get the current context
+                // 2 - get the current context
                 let context = UIGraphicsGetCurrentContext()
                 let colors = [
                     CaffeineColors.statsSeparatorStart.color.cgColor,
                     CaffeineColors.statsSeparatorEnd.color.cgColor
                 ]
-                //3 - set up the color space
+                // 3 - set up the color space
                 let colorSpace = CGColorSpaceCreateDeviceRGB()
-                //4 - set up the color stops
+                // 4 - set up the color stops
                 let colorLocations: [CGFloat] = [0.0, 0.95]
-                //5 - create the gradient
+                // 5 - create the gradient
                 let gradient = CGGradient(colorsSpace: colorSpace, colors: colors as CFArray, locations: colorLocations)
-                //save the state of the context
+                // save the state of the context
                 context?.saveGState()
                 context?.setLineWidth(intersectPath.lineWidth)
                 context?.addPath(intersectPath.cgPath)
                 context?.replacePathWithStrokedPath()
                 context?.clip()
 
-                context?.drawLinearGradient(gradient!, start: intersectStartPoint, end: intersectEndPoint, options: .drawsAfterEndLocation)
+                context?.drawLinearGradient(
+                    gradient!,
+                    start: intersectStartPoint,
+                    end: intersectEndPoint,
+                    options: .drawsAfterEndLocation
+                )
                 context?.restoreGState()
             }
 
             var notZero: Bool = false
-            for item in self.items {
-                if item != 0.0 {
-                    notZero = true
-                }
+            for item in self.items where item != 0.0 {
+                notZero = true
             }
 
             // draw the line graph
@@ -113,10 +119,22 @@ class UICaffeineStatisticsChartView: UIView {
                     let endIndex = items.count - 2
                     let alpha: CGFloat = 0.5
                     for i in startIndex ..< endIndex {
-                        let p0 = CGPoint(x: columnXPoint(i - 1 < 0 ? items.count - 1 : i - 1), y: columnYPoint(Int(items[i - 1 < 0 ? items.count - 1 : i - 1])))
-                        let p1 = CGPoint(x: columnXPoint(i), y: columnYPoint(Int(items[i])))
-                        let p2 = CGPoint(x: columnXPoint((i + 1) % items.count), y: columnYPoint(Int(items[(i + 1) % items.count]))) // (i+1)%(self.items?.count)!
-                        let p3 = CGPoint(x: columnXPoint((i + 1) % items.count + 1), y: columnYPoint(Int(items[(i + 1) % items.count + 1]))) // (i+1)%(self.items?.count)! + 1
+                        let p0 = CGPoint(
+                            x: columnXPoint(i - 1 < 0 ? items.count - 1 : i - 1),
+                            y: columnYPoint(Int(items[i - 1 < 0 ? items.count - 1 : i - 1]))
+                        )
+                        let p1 = CGPoint(
+                            x: columnXPoint(i),
+                            y: columnYPoint(Int(items[i]))
+                        )
+                        let p2 = CGPoint(
+                            x: columnXPoint((i + 1) % items.count),
+                            y: columnYPoint(Int(items[(i + 1) % items.count]))
+                        ) // (i+1)%(self.items?.count)!
+                        let p3 = CGPoint(
+                            x: columnXPoint((i + 1) % items.count + 1),
+                            y: columnYPoint(Int(items[(i + 1) % items.count + 1]))
+                        ) // (i+1)%(self.items?.count)! + 1
 
                         let d1 = p1.deltaTo(p0).length()
                         let d2 = p2.deltaTo(p1).length()
@@ -137,7 +155,10 @@ class UICaffeineStatisticsChartView: UIView {
                         }
                         graphPath.addCurve(to: p2, controlPoint1: b1, controlPoint2: b2)
                     }
-                    let nextPoint = CGPoint(x: columnXPoint(items.count - 1), y: columnYPoint(Int(items[items.count - 1])))
+                    let nextPoint = CGPoint(
+                        x: columnXPoint(items.count - 1),
+                        y: columnYPoint(Int(items[items.count - 1]))
+                    )
                     graphPath.addLine(to: nextPoint)
                 }
             } else {
@@ -151,16 +172,18 @@ class UICaffeineStatisticsChartView: UIView {
 
             graphPath.lineWidth = 2.0
             graphPath.stroke()
-            for i in 0..<items.count {
-                if i % intersectDistance == 0 {
-                    var point = CGPoint(x: columnXPoint(i), y: columnYPoint(Int(items[i])))
-                    point.x -= 5.0 / 2
-                    point.y -= 5.0 / 2
+            for i in 0..<items.count where i % intersectDistance == 0 {
+                var point = CGPoint(x: columnXPoint(i), y: columnYPoint(Int(items[i])))
+                point.x -= 5.0 / 2
+                point.y -= 5.0 / 2
 
-                    let circle = UIBezierPath(ovalIn:
-                        CGRect(origin: point, size: CGSize(width: 5.0, height: 5.0)))
-                    circle.fill()
-                }
+                let circle = UIBezierPath(
+                    ovalIn: CGRect(
+                        origin: point,
+                        size: CGSize(width: 5.0, height: 5.0)
+                    )
+                )
+                circle.fill()
             }
         }
     }

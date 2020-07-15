@@ -33,8 +33,9 @@ class ConsumptionViewController: UIViewController {
             }
         )
 
-        CaffeineDataService.shared.getCaffeineConsumption { [weak self] (success, caffeineReturn) -> Void in
+        CaffeineDataService.shared.getCaffeineConsumption { [weak self] success, caffeineReturn -> Void in
             guard success, let caffeineReturn = caffeineReturn else { return }
+
             DispatchQueue.main.async(
                 execute: { () -> Void in
                     self?.todayCaffeineLabel?.text = "\(Int(round(caffeineReturn)))"
@@ -58,7 +59,7 @@ class ConsumptionViewController: UIViewController {
     private func recentButtonTouch(_ recent: Int) {
         let recentConsumables = DrinksService.shared.getRecentDrinks()
         let recentConsumable = recentConsumables[recent]
-        
+
         // Store the drink with a new date.
         DrinksService.shared.drink(
             .init(
@@ -71,13 +72,13 @@ class ConsumptionViewController: UIViewController {
         )
 
         let alertController = UIAlertController(
-            title: "\(NSLocalizedString("ShortcutHeading", comment: ""))",
-            message: NSLocalizedString("ShortcutText", comment: ""),
+            title: L10n.shortcutHeading,
+            message: L10n.shortcutText,
             preferredStyle: .alert
         )
 
         let okAction = UIAlertAction(
-            title: NSLocalizedString("ShortcutOK", comment: ""),
+            title: L10n.shortcutOK,
             style: .default,
             handler: nil
         )

@@ -10,7 +10,7 @@ final class PersistenceService: NSObject {
 
     static var shared: PersistenceService = .init()
 
-    private override init() {
+    override private init() {
         mainContextInstance = (UIApplication.shared.delegate as? AppDelegate)!
             .contextProvider.mainManagedObjectContextInstance
         super.init()
@@ -27,7 +27,7 @@ final class PersistenceService: NSObject {
     ///
     /// - Parameter workerContext: NSManagedObjectContext The Minion worker Context that has to be saved.
     func saveWorkerContext(_ workerContext: NSManagedObjectContext) {
-        //Persist new Event to datastore (via Managed Object Context Layer).
+        // Persist new Event to datastore (via Managed Object Context Layer).
         do {
             if workerContext.hasChanges {
                 try workerContext.save()
