@@ -45,8 +45,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mse-ps-x5t">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mse-ps-x5t">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YuY-zC-b4d" userLabel="contentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="550"/>
@@ -533,7 +533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Imb-fL-pFl" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1255" y="792"/>
+            <point key="canvasLocation" x="1253.6231884057972" y="791.51785714285711"/>
         </scene>
         <!--Settings-->
         <scene sceneID="WXP-V2-KIq">
@@ -2163,10 +2163,10 @@
                                                     <mask key="constraints">
                                                         <exclude reference="guW-62-9qG"/>
                                                         <exclude reference="zrL-Nm-9OR"/>
-                                                        <exclude reference="IWP-D4-4pB"/>
-                                                        <exclude reference="udC-6B-ffx"/>
                                                         <exclude reference="McQ-IC-EWh"/>
                                                         <exclude reference="mZn-oK-ieb"/>
+                                                        <exclude reference="IWP-D4-4pB"/>
+                                                        <exclude reference="udC-6B-ffx"/>
                                                         <exclude reference="48Y-t6-rpD"/>
                                                         <exclude reference="QRu-xV-HNu"/>
                                                         <exclude reference="vxH-v0-qdn"/>
@@ -2186,10 +2186,10 @@
                                                     <mask key="constraints">
                                                         <include reference="guW-62-9qG"/>
                                                         <include reference="zrL-Nm-9OR"/>
-                                                        <include reference="IWP-D4-4pB"/>
-                                                        <include reference="udC-6B-ffx"/>
                                                         <include reference="McQ-IC-EWh"/>
                                                         <include reference="mZn-oK-ieb"/>
+                                                        <include reference="IWP-D4-4pB"/>
+                                                        <include reference="udC-6B-ffx"/>
                                                         <include reference="48Y-t6-rpD"/>
                                                         <include reference="QRu-xV-HNu"/>
                                                         <include reference="vxH-v0-qdn"/>

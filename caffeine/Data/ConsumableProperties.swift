@@ -9,7 +9,7 @@ import Foundation
 */
 struct ConsumableProperties {
 
-    let title = NSLocalizedString("ConsumptionTitle", comment: "Caffeine Companion")
+    let title = L10n.consumptionTitle
 
     private(set) var volume: Double = 0.0
     private(set) var caffeine: Double = 0.0
@@ -41,18 +41,18 @@ struct ConsumableProperties {
     private mutating func loadDataForCoffee(_ coffee: Coffee) {
         let path = Bundle.main.path(forResource: "Coffee", ofType: "plist")
         let coffeeArray = NSArray(contentsOfFile: path!)
-        var data: Dictionary<String, AnyObject>
+        var data: [String: AnyObject]
         let modifier: Double = 1.0
 
-        switch(coffee) {
+        switch coffee {
         case .noShot:
-            data = coffeeArray?.object(at: 0) as! Dictionary<String, AnyObject>
+            data = coffeeArray?.object(at: 0) as! [String: AnyObject]
         case .singleShot:
-            data = (coffeeArray?.object(at: 1))! as! Dictionary<String, AnyObject>
+            data = (coffeeArray?.object(at: 1))! as! [String: AnyObject]
         case .doubleShot:
-            data = coffeeArray?.object(at: 2) as! Dictionary<String, AnyObject>
+            data = coffeeArray?.object(at: 2) as! [String: AnyObject]
         case .tripleShot:
-            data = coffeeArray?.object(at: 3) as! Dictionary<String, AnyObject>
+            data = coffeeArray?.object(at: 3) as! [String: AnyObject]
         }
         loadNutritionDataWithModifier(data, modifier: modifier)
     }
@@ -66,33 +66,33 @@ struct ConsumableProperties {
     private mutating func loadDataForMilk(_ milk: Milk, size: Size) {
         let path = Bundle.main.path(forResource: "Milk", ofType: "plist")
         let milkArray = NSArray(contentsOfFile: path!)
-        var data: Dictionary<String, AnyObject> = Dictionary()
+        var data: [String: AnyObject] = Dictionary()
 
-        switch(milk) {
+        switch milk {
         case .black:
-            data = milkArray?.object(at: 0) as! Dictionary<String, AnyObject>
+            data = milkArray?.object(at: 0) as! [String: AnyObject]
         case .lactoseFree:
-            data = milkArray?.object(at: 1) as! Dictionary<String, AnyObject>
+            data = milkArray?.object(at: 1) as! [String: AnyObject]
         case .fullFat:
-            data = milkArray?.object(at: 2) as! Dictionary<String, AnyObject>
+            data = milkArray?.object(at: 2) as! [String: AnyObject]
         case .soyMilk:
-            data = milkArray?.object(at: 3) as! Dictionary<String, AnyObject>
+            data = milkArray?.object(at: 3) as! [String: AnyObject]
         }
 
         let sizePath = Bundle.main.path(forResource: "Size", ofType: "plist")
         let sizeArray = NSArray(contentsOfFile: sizePath!)
-        var sizeDict: Dictionary<String, AnyObject> = Dictionary()
+        var sizeDict: [String: AnyObject] = Dictionary()
         var modifier: Double = 1.0
 
-        switch(size) {
+        switch size {
         case .noSize:
-            sizeDict = sizeArray?.object(at: 0) as! Dictionary<String, AnyObject>
+            sizeDict = sizeArray?.object(at: 0) as! [String: AnyObject]
         case .small:
-            sizeDict = sizeArray?.object(at: 1) as! Dictionary<String, AnyObject>
+            sizeDict = sizeArray?.object(at: 1) as! [String: AnyObject]
         case .medium:
-            sizeDict = sizeArray?.object(at: 2) as! Dictionary<String, AnyObject>
+            sizeDict = sizeArray?.object(at: 2) as! [String: AnyObject]
         case .large:
-            sizeDict = sizeArray?.object(at: 3) as! Dictionary<String, AnyObject>
+            sizeDict = sizeArray?.object(at: 3) as! [String: AnyObject]
         }
         modifier = (sizeDict["volume"] as! Double - volume) / 100
         amountOfMilk = data["volume"] as! Double * modifier
@@ -108,18 +108,18 @@ struct ConsumableProperties {
     private mutating func loadDataForSugar(_ sugar: Sugar) {
         let path = Bundle.main.path(forResource: "Sugar", ofType: "plist")
         let sugarArray = NSArray(contentsOfFile: path!)
-        var data: Dictionary<String, AnyObject> = Dictionary()
+        var data: [String: AnyObject] = Dictionary()
         let modifier: Double = 1.0
 
-        switch(sugar) {
+        switch sugar {
         case .noSugar:
-            data = sugarArray?.object(at: 0) as! Dictionary<String, AnyObject>
+            data = sugarArray?.object(at: 0) as! [String: AnyObject]
         case .singlePiece:
-            data = sugarArray?.object(at: 1) as! Dictionary<String, AnyObject>
+            data = sugarArray?.object(at: 1) as! [String: AnyObject]
         case .twoPieces:
-            data = sugarArray?.object(at: 2) as! Dictionary<String, AnyObject>
+            data = sugarArray?.object(at: 2) as! [String: AnyObject]
         case .threePieces:
-            data = sugarArray?.object(at: 3) as! Dictionary<String, AnyObject>
+            data = sugarArray?.object(at: 3) as! [String: AnyObject]
         }
         loadNutritionDataWithModifier(data, modifier: modifier)
     }
@@ -131,19 +131,19 @@ struct ConsumableProperties {
     *
     */
     private mutating func loadNutritionDataWithModifier(
-        _ data: Dictionary<String, AnyObject>,
+        _ data: [String: AnyObject],
         modifier: Double
     ) {
-        volume = volume + (data["volume"] as! Double) * modifier
-        caffeine = caffeine + (data["hkcaffeine"] as! Double) * modifier
-        energyCalories = energyCalories + (data["hkenergyCalories"] as! Double) * modifier
-        fat = fat + (data["hkfat"] as! Double) * modifier
-        saturatedFat = saturatedFat + (data["hksaturatedFat"] as! Double) * modifier
-        unsaturatedFat = unsaturatedFat + (data["hkunsaturatedFat"] as! Double) * modifier
-        sodium = sodium + (data["hksodium"] as! Double) * modifier
-        potassium = potassium + (data["hkpotassium"] as! Double) * modifier
-        carbs = carbs + (data["hkcarbs"] as! Double) * modifier
-        sugar = sugar + (data["hksugar"] as! Double) * modifier
-        protein = protein + (data["hkprotein"] as! Double) * modifier
+        volume += (data["volume"] as! Double) * modifier
+        caffeine += (data["hkcaffeine"] as! Double) * modifier
+        energyCalories += (data["hkenergyCalories"] as! Double) * modifier
+        fat += (data["hkfat"] as! Double) * modifier
+        saturatedFat += (data["hksaturatedFat"] as! Double) * modifier
+        unsaturatedFat += (data["hkunsaturatedFat"] as! Double) * modifier
+        sodium += (data["hksodium"] as! Double) * modifier
+        potassium += (data["hkpotassium"] as! Double) * modifier
+        carbs += (data["hkcarbs"] as! Double) * modifier
+        sugar += (data["hksugar"] as! Double) * modifier
+        protein += (data["hkprotein"] as! Double) * modifier
     }
 }

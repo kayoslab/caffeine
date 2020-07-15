@@ -13,7 +13,7 @@ final class ConsumptionStore: NSObject {
     private var mainContextInstance: NSManagedObjectContext
 
     /// Private initialiser to enforce the singleton pattern.
-    private override init() {
+    override private init() {
         mainContextInstance = PersistenceService.shared.getMainContextInstance()
     }
 }
@@ -54,24 +54,26 @@ extension ConsumptionStore: ConsumptionDataProvider {
             return []
         }
 
-        return entries.compactMap {
-            guard
-                let coffee = Coffee(rawValue: Int($0.coffee)),
-                let milk = Milk(rawValue: Int($0.milk)),
-                let size = Size(rawValue: Int($0.size)),
-                let sugar = Sugar(rawValue: Int($0.sugar)),
-                let date = $0.date
-            else {
-                return nil
+        return entries
+            .compactMap {
+                guard
+                    let coffee = Coffee(rawValue: Int($0.coffee)),
+                    let milk = Milk(rawValue: Int($0.milk)),
+                    let size = Size(rawValue: Int($0.size)),
+                    let sugar = Sugar(rawValue: Int($0.sugar)),
+                    let date = $0.date
+                else {
+                    return nil
+                }
+                return Consumable(
+                    coffee: coffee,
+                    milk: milk,
+                    size: size,
+                    sugar: sugar,
+                    date: date
+                )
             }
-            return Consumable(
-                coffee: coffee,
-                milk: milk,
-                size: size,
-                sugar: sugar,
-                date: date
-            )
-        }.reversed()
+            .reversed()
     }
 
     func getEntries(for period: Period) -> [Consumable] {

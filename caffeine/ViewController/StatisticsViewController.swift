@@ -35,8 +35,9 @@ class StatisticsViewController: UIViewController {
 
         updateStatisticsChartView()
 
-        CaffeineDataService.shared.getCaffeineConcentration { (success, caffeineReturn) -> Void in
+        CaffeineDataService.shared.getCaffeineConcentration { success, caffeineReturn -> Void in
             guard success, let caffeineReturn = caffeineReturn else { return }
+
             DispatchQueue.main.async(
                 execute: { [weak self] () -> Void in
                     self?.caffeineRateLabel?.text = "\(Int(round(caffeineReturn)))"
@@ -49,6 +50,7 @@ class StatisticsViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+
         for totalImageView in [totalShotsImageView, totalMilkImageView, totalSugarImageView] {
             totalImageView?.isHidden = true
         }
@@ -97,25 +99,27 @@ class StatisticsViewController: UIViewController {
             catmullRom: catmull
         )
 
-        switch (selectorState) {
-            case .day:
-                leftStatisticsDescriptionLabel?.text = "0"
-                centerStatisticsDescriptionLabel?.text = "12"
-                rightStatisticsDescriptionLabel?.text = "24"
-            case .week:
-                guard Calendar.current.shortWeekdaySymbols.count >= 6 else { return }
-                leftStatisticsDescriptionLabel?.text = Calendar.current.shortWeekdaySymbols[0]
-                centerStatisticsDescriptionLabel?.text = Calendar.current.shortWeekdaySymbols[3]
-                rightStatisticsDescriptionLabel?.text = Calendar.current.shortWeekdaySymbols[6]
-            case .month:
-                leftStatisticsDescriptionLabel?.text = "1st"
-                centerStatisticsDescriptionLabel?.text = "15th"
-                rightStatisticsDescriptionLabel?.text = "30th"
-            case .year:
-                guard Calendar.current.shortMonthSymbols.count >= 12 else { return }
-                leftStatisticsDescriptionLabel?.text = Calendar.current.shortMonthSymbols[0]
-                centerStatisticsDescriptionLabel?.text = ""
-                rightStatisticsDescriptionLabel?.text = Calendar.current.shortMonthSymbols[11]
+        switch selectorState {
+        case .day:
+            leftStatisticsDescriptionLabel?.text = "0"
+            centerStatisticsDescriptionLabel?.text = "12"
+            rightStatisticsDescriptionLabel?.text = "24"
+        case .week:
+            guard Calendar.current.shortWeekdaySymbols.count >= 6 else { return }
+
+            leftStatisticsDescriptionLabel?.text = Calendar.current.shortWeekdaySymbols[0]
+            centerStatisticsDescriptionLabel?.text = Calendar.current.shortWeekdaySymbols[3]
+            rightStatisticsDescriptionLabel?.text = Calendar.current.shortWeekdaySymbols[6]
+        case .month:
+            leftStatisticsDescriptionLabel?.text = "1st"
+            centerStatisticsDescriptionLabel?.text = "15th"
+            rightStatisticsDescriptionLabel?.text = "30th"
+        case .year:
+            guard Calendar.current.shortMonthSymbols.count >= 12 else { return }
+
+            leftStatisticsDescriptionLabel?.text = Calendar.current.shortMonthSymbols[0]
+            centerStatisticsDescriptionLabel?.text = ""
+            rightStatisticsDescriptionLabel?.text = Calendar.current.shortMonthSymbols[11]
         }
     }
 

@@ -1,14 +1,6 @@
-//
-//  caffeineUITests.swift
-//  caffeineUITests
-//
-//  Created by cr0ss on 18.09.15.
-//  Copyright © 2015 kayos. All rights reserved.
-//
-
 import XCTest
 
-class caffeineUITests: XCTestCase {
+class CaffeineUITests: XCTestCase {
 
     private var app: XCUIApplication?
 
