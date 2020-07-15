@@ -10,9 +10,10 @@ cache:
     - $HOME/.cocoapods/
 
 before_install:
-- gem install cocoapods-acknowledgements
-- gem install cocoapods
-- pod update
+- bundle install
+
+install:
+- pod outdated | awk '{ if ( $1 ~ /^-/ ) { print $0 } }' | awk '{ if ( $3 != $5 ) { pod update $2 } else { print "No updated needed it for" $2 } }
 
 script:
   - xcodebuild test -workspace ./caffeine.xcworkspace -scheme caffeine -enableCodeCoverage YES ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator,OS=13.5,name=iPhone 11 Pro'
