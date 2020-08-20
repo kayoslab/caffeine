@@ -57,3 +57,12 @@
 "singlepiece" = "1 Zucker";
 "twopiece" = "2 Zucker";
 "threepiece" = "3 Zucker";
+
+"SettingsTitleWeight" = "Gewicht in kg:";
+"SettingsTitleHeight" = "Größe in cm:";
+"SettingsTitleSensibility" = "Sensibilität in %%:";
+"SettingsTitleSex" = "Geschlecht:";
+"SettingsMedicalInformation" = "Medizinische Informationen!";
+
+"SettingsMale" = "Männlich";
+"SettingsFemale" = "Weiblich";

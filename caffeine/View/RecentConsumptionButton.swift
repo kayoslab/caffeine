@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class UICaffeineConsumptionRecentButton: UIButton {
+class RecentConsumptionButton: UIButton {
     @IBOutlet private weak var cupIcon: UIImageView!
     @IBOutlet private weak var mainLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
