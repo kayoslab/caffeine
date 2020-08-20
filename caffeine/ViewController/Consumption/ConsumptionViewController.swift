@@ -6,9 +6,9 @@ class ConsumptionViewController: UIViewController {
     @IBOutlet private weak var todayCaffeineLabel: UILabel?
     @IBOutlet private weak var maximumCaffeineLabel: UILabel?
 
-    @IBOutlet private weak var firstButton: UICaffeineConsumptionRecentButton?
-    @IBOutlet private weak var secondButton: UICaffeineConsumptionRecentButton?
-    @IBOutlet private weak var thirdButton: UICaffeineConsumptionRecentButton?
+    @IBOutlet private weak var firstButton: RecentConsumptionButton?
+    @IBOutlet private weak var secondButton: RecentConsumptionButton?
+    @IBOutlet private weak var thirdButton: RecentConsumptionButton?
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

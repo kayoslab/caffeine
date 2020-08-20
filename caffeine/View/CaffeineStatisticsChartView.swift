@@ -10,7 +10,7 @@ import UIKit
 *
 */
 
-class UICaffeineStatisticsChartView: UIView {
+class CaffeineStatisticsChartView: UIView {
     private var items: [Double] = []
     private var catmullRom: Bool = true
     private var objectCounter: Int {

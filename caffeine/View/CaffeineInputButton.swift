@@ -2,13 +2,7 @@ import Foundation
 import UIKit
 import Spring
 
-struct UICaffeineInputButtonViewModel {
-    let inputIconImage: UIImage
-    let selectIconImage: UIImage
-    let descriptionLabelText: String?
-}
-
-class UICaffeineInputButton: UIButton {
+class CaffeineInputButton: UIButton {
     @IBOutlet private weak var inputIcon: DesignableImageView?
     @IBOutlet private weak var selectIcon: SpringImageView?
     @IBOutlet private weak var descriptionLabel: UILabel?

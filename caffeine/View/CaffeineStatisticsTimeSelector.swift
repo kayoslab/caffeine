@@ -8,7 +8,7 @@ enum SelectorState: Int {
     case year
 }
 
-class UICaffeineStatisticsTimeSelectorView: UIView {
+class CaffeineStatisticsTimeSelector: UIView {
     @IBOutlet private weak var dayButton: UIButton?
     @IBOutlet private weak var weekButton: UIButton?
     @IBOutlet private weak var monthButton: UIButton?

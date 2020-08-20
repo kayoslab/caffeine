@@ -17,63 +17,63 @@ class InputViewController: UIViewController {
     private var cupState: Size = .noSize
     private var sugarState: Sugar = .noSugar
 
-    private var shotSender: UICaffeineInputButton?
-    private var milkSender: UICaffeineInputButton?
-    private var cupSender: UICaffeineInputButton?
-    private var sugarSender: UICaffeineInputButton?
+    private var shotSender: CaffeineInputButton?
+    private var milkSender: CaffeineInputButton?
+    private var cupSender: CaffeineInputButton?
+    private var sugarSender: CaffeineInputButton?
 
-    @IBOutlet private var inputOKButton: UICaffeineInputOKButton?
+    @IBOutlet private var inputOKButton: CaffeineInputOKButton?
 
     // MARK: Input Shot, Milk, Cupsize and Sugar IBActions
-    @IBAction private func oneShotIconClicked(_ sender: UICaffeineInputButton) {
+    @IBAction private func oneShotIconClicked(_ sender: CaffeineInputButton) {
         changeCoffeeState(sender, state: .singleShot)
     }
 
-    @IBAction private func twoShotIconClicked(_ sender: UICaffeineInputButton) {
+    @IBAction private func twoShotIconClicked(_ sender: CaffeineInputButton) {
         changeCoffeeState(sender, state: .doubleShot)
     }
 
-    @IBAction private func threeShotIconClicked(_ sender: UICaffeineInputButton) {
+    @IBAction private func threeShotIconClicked(_ sender: CaffeineInputButton) {
         changeCoffeeState(sender, state: .tripleShot)
     }
 
-    @IBAction private func lactosefreeMilkIconClicked(_ sender: UICaffeineInputButton) {
+    @IBAction private func lactosefreeMilkIconClicked(_ sender: CaffeineInputButton) {
         changeMilkState(sender, state: .lactoseFree)
     }
 
-    @IBAction private func wholeMilkIconClicked(_ sender: UICaffeineInputButton) {
+    @IBAction private func wholeMilkIconClicked(_ sender: CaffeineInputButton) {
         changeMilkState(sender, state: .fullFat)
     }
 
-    @IBAction private func soyMIlkIconClicked(_ sender: UICaffeineInputButton) {
+    @IBAction private func soyMIlkIconClicked(_ sender: CaffeineInputButton) {
         changeMilkState(sender, state: .soyMilk)
     }
 
-    @IBAction private func smallIconClicked(_ sender: UICaffeineInputButton) {
+    @IBAction private func smallIconClicked(_ sender: CaffeineInputButton) {
         changeCupState(sender, state: .small)
     }
 
-    @IBAction private func middleIconClicked(_ sender: UICaffeineInputButton) {
+    @IBAction private func middleIconClicked(_ sender: CaffeineInputButton) {
         changeCupState(sender, state: .medium)
     }
 
-    @IBAction private func largeIconClicked(_ sender: UICaffeineInputButton) {
+    @IBAction private func largeIconClicked(_ sender: CaffeineInputButton) {
         changeCupState(sender, state: .large)
     }
 
-    @IBAction private func oneSugarIconClicked(_ sender: UICaffeineInputButton) {
+    @IBAction private func oneSugarIconClicked(_ sender: CaffeineInputButton) {
         changeSugarState(sender, state: .singlePiece)
     }
 
-    @IBAction private func twoSugarIconClicked(_ sender: UICaffeineInputButton) {
+    @IBAction private func twoSugarIconClicked(_ sender: CaffeineInputButton) {
         changeSugarState(sender, state: .twoPieces)
     }
 
-    @IBAction private func threeSugarIconClicked(_ sender: UICaffeineInputButton) {
+    @IBAction private func threeSugarIconClicked(_ sender: CaffeineInputButton) {
         changeSugarState(sender, state: .threePieces)
     }
 
-    @IBAction private func inputOKButtonClicked(_ sender: UICaffeineInputOKButton) {
+    @IBAction private func inputOKButtonClicked(_ sender: CaffeineInputOKButton) {
         // TODO: TapticEngine Vibration after Swift/iOS Update
 
         DrinksService.shared.drink(
@@ -106,7 +106,7 @@ class InputViewController: UIViewController {
     }
 
     // MARK: State Machine
-    private func changeCoffeeState(_ sender: UICaffeineInputButton, state: Coffee) {
+    private func changeCoffeeState(_ sender: CaffeineInputButton, state: Coffee) {
         if shotState == .noShot {
             shotSender = sender
             shotState = state
@@ -123,7 +123,7 @@ class InputViewController: UIViewController {
         checkInputOKButtonState()
     }
 
-    private func changeMilkState(_ sender: UICaffeineInputButton, state: Milk) {
+    private func changeMilkState(_ sender: CaffeineInputButton, state: Milk) {
         if milkState == .black {
             milkSender = sender
             milkState = state
@@ -140,7 +140,7 @@ class InputViewController: UIViewController {
         checkInputOKButtonState()
     }
 
-    private func changeCupState(_ sender: UICaffeineInputButton, state: Size) {
+    private func changeCupState(_ sender: CaffeineInputButton, state: Size) {
         if cupState == .noSize {
             cupSender = sender
             cupState = state
@@ -157,7 +157,7 @@ class InputViewController: UIViewController {
         checkInputOKButtonState()
     }
 
-    private func changeSugarState(_ sender: UICaffeineInputButton, state: Sugar) {
+    private func changeSugarState(_ sender: CaffeineInputButton, state: Sugar) {
         if sugarState == .noSugar {
             sugarSender = sender
             sugarState = state
@@ -177,23 +177,23 @@ class InputViewController: UIViewController {
     // Button Logic
     private func checkInputOKButtonState() {
         if shotState != .noShot {
-            inputOKButton?.makeButtonSelectable()
+            inputOKButton?.isSelectable = true
         } else {
             if milkState != .black && cupState != .noSize {
-                inputOKButton?.makeButtonSelectable()
+                inputOKButton?.isSelectable = true
             } else {
-                inputOKButton?.makeButtonNotSelectable()
+                inputOKButton?.isSelectable = false
             }
         }
     }
 
     // MARK: Button Tap handler
 
-    private func buttonTap(_ sender: UICaffeineInputButton?) {
+    private func buttonTap(_ sender: CaffeineInputButton?) {
         buttonTap(sender, animated: false)
     }
 
-    private func buttonTap(_ sender: UICaffeineInputButton?, animated: Bool) {
+    private func buttonTap(_ sender: CaffeineInputButton?, animated: Bool) {
         guard let sender = sender else { return }
 
         sender.tapAnimation(animated)
