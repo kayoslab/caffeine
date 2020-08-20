@@ -66,6 +66,20 @@ internal enum L10n {
   internal static let sensibilityAlertTitle = L10n.tr("Localizable", "SensibilityAlertTitle")
   /// SEPT
   internal static let september = L10n.tr("Localizable", "September")
+  /// Female
+  internal static let settingsFemale = L10n.tr("Localizable", "SettingsFemale")
+  /// Male
+  internal static let settingsMale = L10n.tr("Localizable", "SettingsMale")
+  /// Medical Information!
+  internal static let settingsMedicalInformation = L10n.tr("Localizable", "SettingsMedicalInformation")
+  /// Height in cm:
+  internal static let settingsTitleHeight = L10n.tr("Localizable", "SettingsTitleHeight")
+  /// Sensibility in %%:
+  internal static let settingsTitleSensibility = L10n.tr("Localizable", "SettingsTitleSensibility")
+  /// Sex:
+  internal static let settingsTitleSex = L10n.tr("Localizable", "SettingsTitleSex")
+  /// Weight in kg:
+  internal static let settingsTitleWeight = L10n.tr("Localizable", "SettingsTitleWeight")
   /// Coffee Saved!
   internal static let shortcutHeading = L10n.tr("Localizable", "ShortcutHeading")
   /// OK

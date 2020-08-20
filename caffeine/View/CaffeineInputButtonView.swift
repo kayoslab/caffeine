@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class UICaffeineInputButtonView: UIView {
+class CaffeineInputButtonView: UIView {
 
     override init (frame: CGRect) {
         super.init(frame: frame)

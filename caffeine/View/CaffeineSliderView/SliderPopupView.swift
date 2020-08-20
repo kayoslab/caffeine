@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class UISliderPopupView: UIView {
+class SliderPopupView: UIView {
      @IBOutlet private weak var popUpLabel: UILabel?
 
     func setLabel(text: String?) {

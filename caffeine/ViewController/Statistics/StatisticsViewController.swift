@@ -13,8 +13,8 @@ import Spring
 */
 class StatisticsViewController: UIViewController {
 
-    @IBOutlet private weak var timeSelectorView: UICaffeineStatisticsTimeSelectorView?
-    @IBOutlet private weak var statisticsChartView: UICaffeineStatisticsChartView?
+    @IBOutlet private weak var timeSelectorView: CaffeineStatisticsTimeSelector?
+    @IBOutlet private weak var statisticsChartView: CaffeineStatisticsChartView?
     @IBOutlet private weak var caffeineRateLabel: UILabel?
     @IBOutlet private weak var totalCupsLabel: UILabel?
     @IBOutlet private weak var totalMilkLabel: UILabel?

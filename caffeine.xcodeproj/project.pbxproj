@@ -11,9 +11,9 @@
 		600647DC1BAE0A1B00101295 /* Milk.plist in Resources */ = {isa = PBXBuildFile; fileRef = 600647DB1BAE0A1B00101295 /* Milk.plist */; };
 		600647DE1BAE0A2700101295 /* Sugar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 600647DD1BAE0A2700101295 /* Sugar.plist */; };
 		600647E01BAE0A3D00101295 /* Size.plist in Resources */ = {isa = PBXBuildFile; fileRef = 600647DF1BAE0A3D00101295 /* Size.plist */; };
-		600D1C381BE7C47C00DC9500 /* UICaffeineInputButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600D1C371BE7C47C00DC9500 /* UICaffeineInputButtonView.swift */; };
-		601336D11BF389E6006A67D3 /* UICaffeineStatisticsTimeSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601336D01BF389E6006A67D3 /* UICaffeineStatisticsTimeSelectorView.swift */; };
-		601EB15A1C00CF9A00F56A2A /* UICaffeineConsumptionRecentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601EB1591C00CF9A00F56A2A /* UICaffeineConsumptionRecentButton.swift */; };
+		600D1C381BE7C47C00DC9500 /* CaffeineInputButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600D1C371BE7C47C00DC9500 /* CaffeineInputButtonView.swift */; };
+		601336D11BF389E6006A67D3 /* CaffeineStatisticsTimeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601336D01BF389E6006A67D3 /* CaffeineStatisticsTimeSelector.swift */; };
+		601EB15A1C00CF9A00F56A2A /* RecentConsumptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601EB1591C00CF9A00F56A2A /* RecentConsumptionButton.swift */; };
 		601FAA291BAC52D200553555 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601FAA271BAC52D200553555 /* InputViewController.swift */; };
 		601FAA2A1BAC52D200553555 /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601FAA281BAC52D200553555 /* ConsumptionViewController.swift */; };
 		601FAA2C1BAC52E300553555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601FAA2B1BAC52E300553555 /* AppDelegate.swift */; };
@@ -34,9 +34,16 @@
 		60481E1624AB71D8008DE168 /* CaffeineColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60481E1524AB71D8008DE168 /* CaffeineColors.swift */; };
 		60481E1924AB76C8008DE168 /* Consumable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60481E1824AB76C8008DE168 /* Consumable.swift */; };
 		60481E1B24AB7860008DE168 /* ConsumableProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60481E1A24AB7860008DE168 /* ConsumableProperties.swift */; };
-		60496F2B1BD011CA00A72757 /* UISliderPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60496F2A1BD011CA00A72757 /* UISliderPopupView.swift */; };
-		60496F2D1BD015CE00A72757 /* UICaffeineSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60496F2C1BD015CE00A72757 /* UICaffeineSlider.swift */; };
-		6062DFF11BDAA05E003EF136 /* UICaffeineInputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6062DFF01BDAA05E003EF136 /* UICaffeineInputButton.swift */; };
+		60496F2B1BD011CA00A72757 /* SliderPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60496F2A1BD011CA00A72757 /* SliderPopupView.swift */; };
+		60496F2D1BD015CE00A72757 /* CaffeineSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60496F2C1BD015CE00A72757 /* CaffeineSlider.swift */; };
+		6062DFF11BDAA05E003EF136 /* CaffeineInputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6062DFF01BDAA05E003EF136 /* CaffeineInputButton.swift */; };
+		609B636724EE489A00773D6C /* Consumption.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 609B636624EE489A00773D6C /* Consumption.storyboard */; };
+		609B636924EE48A100773D6C /* Input.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 609B636824EE48A100773D6C /* Input.storyboard */; };
+		609B636B24EE48A800773D6C /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 609B636A24EE48A800773D6C /* Statistics.storyboard */; };
+		609B636D24EE48AF00773D6C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 609B636C24EE48AF00773D6C /* Settings.storyboard */; };
+		609B637524EE4DBB00773D6C /* CaffeineSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609B637424EE4DBB00773D6C /* CaffeineSliderView.swift */; };
+		609B637724EE4E4B00773D6C /* CaffeineSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609B637624EE4E4B00773D6C /* CaffeineSliderView.xib */; };
+		609B637924EE590E00773D6C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609B637824EE590E00773D6C /* NibLoadable.swift */; };
 		60BE64AE24AF620D000F26C4 /* CaffeineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE64AD24AF620D000F26C4 /* CaffeineUITests.swift */; };
 		60BE64B624AF634E000F26C4 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BE64B524AF634E000F26C4 /* SnapshotHelper.swift */; };
 		60CA813D24AC6D8200DDED35 /* PeriodicConsumption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CA813C24AC6D8200DDED35 /* PeriodicConsumption.swift */; };
@@ -50,8 +57,11 @@
 		60CA815024ADC59B00DDED35 /* ConsumptionDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CA814F24ADC59B00DDED35 /* ConsumptionDataProvider.swift */; };
 		60D3BAF41BC12CC100CAC7DE /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D3BAF31BC12CC100CAC7DE /* StatisticsViewController.swift */; };
 		60D3BAF61BC12D2000CAC7DE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D3BAF51BC12D2000CAC7DE /* SettingsViewController.swift */; };
-		60E76D2B1BEA183300670CEA /* UICaffeineInputOKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E76D2A1BEA183300670CEA /* UICaffeineInputOKButton.swift */; };
-		60E76D2D1BEB608800670CEA /* UICaffeineStatisticsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E76D2C1BEB608800670CEA /* UICaffeineStatisticsChartView.swift */; };
+		60E76D2B1BEA183300670CEA /* CaffeineInputOKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E76D2A1BEA183300670CEA /* CaffeineInputOKButton.swift */; };
+		60E76D2D1BEB608800670CEA /* CaffeineStatisticsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E76D2C1BEB608800670CEA /* CaffeineStatisticsChartView.swift */; };
+		60FED33E24EE5F6E00979D21 /* SliderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FED33D24EE5F6E00979D21 /* SliderType.swift */; };
+		60FED34024EE66EB00979D21 /* SettingsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FED33F24EE66EB00979D21 /* SettingsWebViewController.swift */; };
+		60FED34224EE679B00979D21 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FED34124EE679B00979D21 /* WebKit.framework */; };
 		95B669E5BD1E01661467093F /* Pods_caffeine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0D4BC68B85877491EC9915 /* Pods_caffeine.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,11 +89,11 @@
 		600647DB1BAE0A1B00101295 /* Milk.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Milk.plist; path = "Supporting Files/Consumption/Milk.plist"; sourceTree = "<group>"; };
 		600647DD1BAE0A2700101295 /* Sugar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Sugar.plist; path = "Supporting Files/Consumption/Sugar.plist"; sourceTree = "<group>"; };
 		600647DF1BAE0A3D00101295 /* Size.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Size.plist; path = "Supporting Files/Consumption/Size.plist"; sourceTree = "<group>"; };
-		600D1C371BE7C47C00DC9500 /* UICaffeineInputButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICaffeineInputButtonView.swift; path = View/UICaffeineInputButtonView.swift; sourceTree = "<group>"; };
-		601336D01BF389E6006A67D3 /* UICaffeineStatisticsTimeSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICaffeineStatisticsTimeSelectorView.swift; path = View/UICaffeineStatisticsTimeSelectorView.swift; sourceTree = "<group>"; };
-		601EB1591C00CF9A00F56A2A /* UICaffeineConsumptionRecentButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICaffeineConsumptionRecentButton.swift; path = View/UICaffeineConsumptionRecentButton.swift; sourceTree = "<group>"; };
-		601FAA271BAC52D200553555 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputViewController.swift; path = ViewController/InputViewController.swift; sourceTree = "<group>"; };
-		601FAA281BAC52D200553555 /* ConsumptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConsumptionViewController.swift; path = ViewController/ConsumptionViewController.swift; sourceTree = "<group>"; };
+		600D1C371BE7C47C00DC9500 /* CaffeineInputButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaffeineInputButtonView.swift; sourceTree = "<group>"; };
+		601336D01BF389E6006A67D3 /* CaffeineStatisticsTimeSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaffeineStatisticsTimeSelector.swift; sourceTree = "<group>"; };
+		601EB1591C00CF9A00F56A2A /* RecentConsumptionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentConsumptionButton.swift; sourceTree = "<group>"; };
+		601FAA271BAC52D200553555 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		601FAA281BAC52D200553555 /* ConsumptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumptionViewController.swift; sourceTree = "<group>"; };
 		601FAA2B1BAC52E300553555 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6025626224BEF31600EF6054 /* Matchfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Matchfile; path = fastlane/Matchfile; sourceTree = SOURCE_ROOT; };
 		602E64A71BAC1BDF00E25D52 /* caffeine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = caffeine.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,9 +124,16 @@
 		60481E1524AB71D8008DE168 /* CaffeineColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineColors.swift; sourceTree = "<group>"; };
 		60481E1824AB76C8008DE168 /* Consumable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consumable.swift; sourceTree = "<group>"; };
 		60481E1A24AB7860008DE168 /* ConsumableProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumableProperties.swift; sourceTree = "<group>"; };
-		60496F2A1BD011CA00A72757 /* UISliderPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISliderPopupView.swift; path = View/UISliderPopupView.swift; sourceTree = "<group>"; };
-		60496F2C1BD015CE00A72757 /* UICaffeineSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICaffeineSlider.swift; path = View/UICaffeineSlider.swift; sourceTree = "<group>"; };
-		6062DFF01BDAA05E003EF136 /* UICaffeineInputButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICaffeineInputButton.swift; path = View/UICaffeineInputButton.swift; sourceTree = "<group>"; };
+		60496F2A1BD011CA00A72757 /* SliderPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderPopupView.swift; sourceTree = "<group>"; };
+		60496F2C1BD015CE00A72757 /* CaffeineSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaffeineSlider.swift; sourceTree = "<group>"; };
+		6062DFF01BDAA05E003EF136 /* CaffeineInputButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaffeineInputButton.swift; sourceTree = "<group>"; };
+		609B636624EE489A00773D6C /* Consumption.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Consumption.storyboard; sourceTree = "<group>"; };
+		609B636824EE48A100773D6C /* Input.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Input.storyboard; sourceTree = "<group>"; };
+		609B636A24EE48A800773D6C /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
+		609B636C24EE48AF00773D6C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		609B637424EE4DBB00773D6C /* CaffeineSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaffeineSliderView.swift; path = caffeine/ViewController/CaffeineSliderView.swift; sourceTree = SOURCE_ROOT; };
+		609B637624EE4E4B00773D6C /* CaffeineSliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CaffeineSliderView.xib; path = caffeine/ViewController/CaffeineSliderView.xib; sourceTree = SOURCE_ROOT; };
+		609B637824EE590E00773D6C /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		60BE64AB24AF620D000F26C4 /* caffeineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = caffeineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60BE64AD24AF620D000F26C4 /* CaffeineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineUITests.swift; sourceTree = "<group>"; };
 		60BE64AF24AF620D000F26C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,12 +147,15 @@
 		60CA814B24ADC4A700DDED35 /* ContextProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextProvider.swift; sourceTree = "<group>"; };
 		60CA814D24ADC57500DDED35 /* ConsumptionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionStore.swift; sourceTree = "<group>"; };
 		60CA814F24ADC59B00DDED35 /* ConsumptionDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionDataProvider.swift; sourceTree = "<group>"; };
-		60D3BAF31BC12CC100CAC7DE /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticsViewController.swift; path = ViewController/StatisticsViewController.swift; sourceTree = "<group>"; };
-		60D3BAF51BC12D2000CAC7DE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ViewController/SettingsViewController.swift; sourceTree = "<group>"; };
+		60D3BAF31BC12CC100CAC7DE /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		60D3BAF51BC12D2000CAC7DE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		60D941701BC8623100C203C6 /* MindModellDesctiption.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = MindModellDesctiption.rtf; path = "Supporting Files/MindModellDesctiption.rtf"; sourceTree = "<group>"; };
 		60D941721BC8659C00C203C6 /* CaffeineDataDescription.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = CaffeineDataDescription.rtf; path = "Supporting Files/CaffeineDataDescription.rtf"; sourceTree = "<group>"; };
-		60E76D2A1BEA183300670CEA /* UICaffeineInputOKButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICaffeineInputOKButton.swift; path = View/UICaffeineInputOKButton.swift; sourceTree = "<group>"; };
-		60E76D2C1BEB608800670CEA /* UICaffeineStatisticsChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UICaffeineStatisticsChartView.swift; path = View/UICaffeineStatisticsChartView.swift; sourceTree = "<group>"; };
+		60E76D2A1BEA183300670CEA /* CaffeineInputOKButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaffeineInputOKButton.swift; sourceTree = "<group>"; };
+		60E76D2C1BEB608800670CEA /* CaffeineStatisticsChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaffeineStatisticsChartView.swift; sourceTree = "<group>"; };
+		60FED33D24EE5F6E00979D21 /* SliderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderType.swift; sourceTree = "<group>"; };
+		60FED33F24EE66EB00979D21 /* SettingsWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWebViewController.swift; sourceTree = "<group>"; };
+		60FED34124EE679B00979D21 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		6943F8CA7228E6BA43EF1D52 /* Pods-caffeine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-caffeine.release.xcconfig"; path = "Pods/Target Support Files/Pods-caffeine/Pods-caffeine.release.xcconfig"; sourceTree = "<group>"; };
 		6A7D83803EA44D18A8ACA433 /* Pods-caffeineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-caffeineTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-caffeineTests/Pods-caffeineTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6B0FA68D033FC175428005D5 /* Pods-caffeineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-caffeineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-caffeineTests/Pods-caffeineTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +173,7 @@
 			files = (
 				602E64E51BAC3C6C00E25D52 /* HealthKit.framework in Frameworks */,
 				95B669E5BD1E01661467093F /* Pods_caffeine.framework in Frameworks */,
+				60FED34224EE679B00979D21 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,21 +205,6 @@
 			name = Consumption;
 			sourceTree = "<group>";
 		};
-		601FAA2D1BAC532300553555 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				60496F2A1BD011CA00A72757 /* UISliderPopupView.swift */,
-				60496F2C1BD015CE00A72757 /* UICaffeineSlider.swift */,
-				601EB1591C00CF9A00F56A2A /* UICaffeineConsumptionRecentButton.swift */,
-				6062DFF01BDAA05E003EF136 /* UICaffeineInputButton.swift */,
-				60E76D2A1BEA183300670CEA /* UICaffeineInputOKButton.swift */,
-				600D1C371BE7C47C00DC9500 /* UICaffeineInputButtonView.swift */,
-				60E76D2C1BEB608800670CEA /* UICaffeineStatisticsChartView.swift */,
-				601336D01BF389E6006A67D3 /* UICaffeineStatisticsTimeSelectorView.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		602E649E1BAC1BDF00E25D52 = {
 			isa = PBXGroup;
 			children = (
@@ -228,22 +234,11 @@
 				60481E1724AB76A5008DE168 /* Data */,
 				60481E1424AB71BE008DE168 /* Styling */,
 				603DEE0224AB7C2D0079A79C /* Services */,
-				601FAA2D1BAC532300553555 /* View */,
-				602E64DB1BAC1BF400E25D52 /* ViewController */,
+				609B636E24EE48B400773D6C /* View */,
+				609B636524EE486A00773D6C /* ViewController */,
 				602E64DD1BAC1C0600E25D52 /* Supporting Files */,
 			);
 			path = caffeine;
-			sourceTree = "<group>";
-		};
-		602E64DB1BAC1BF400E25D52 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				601FAA281BAC52D200553555 /* ConsumptionViewController.swift */,
-				601FAA271BAC52D200553555 /* InputViewController.swift */,
-				60D3BAF31BC12CC100CAC7DE /* StatisticsViewController.swift */,
-				60D3BAF51BC12D2000CAC7DE /* SettingsViewController.swift */,
-			);
-			name = ViewController;
 			sourceTree = "<group>";
 		};
 		602E64DD1BAC1C0600E25D52 /* Supporting Files */ = {
@@ -351,6 +346,81 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		609B636524EE486A00773D6C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				609B636F24EE4CA000773D6C /* Consumption */,
+				609B637024EE4CA600773D6C /* Input */,
+				609B637124EE4CAD00773D6C /* Statistics */,
+				609B637224EE4CB400773D6C /* Settings */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		609B636E24EE48B400773D6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				609B637324EE4DAF00773D6C /* CaffeineSliderView */,
+				601EB1591C00CF9A00F56A2A /* RecentConsumptionButton.swift */,
+				6062DFF01BDAA05E003EF136 /* CaffeineInputButton.swift */,
+				60E76D2A1BEA183300670CEA /* CaffeineInputOKButton.swift */,
+				600D1C371BE7C47C00DC9500 /* CaffeineInputButtonView.swift */,
+				60E76D2C1BEB608800670CEA /* CaffeineStatisticsChartView.swift */,
+				601336D01BF389E6006A67D3 /* CaffeineStatisticsTimeSelector.swift */,
+				609B637824EE590E00773D6C /* NibLoadable.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		609B636F24EE4CA000773D6C /* Consumption */ = {
+			isa = PBXGroup;
+			children = (
+				601FAA281BAC52D200553555 /* ConsumptionViewController.swift */,
+				609B636624EE489A00773D6C /* Consumption.storyboard */,
+			);
+			path = Consumption;
+			sourceTree = "<group>";
+		};
+		609B637024EE4CA600773D6C /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				601FAA271BAC52D200553555 /* InputViewController.swift */,
+				609B636824EE48A100773D6C /* Input.storyboard */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		609B637124EE4CAD00773D6C /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				60D3BAF31BC12CC100CAC7DE /* StatisticsViewController.swift */,
+				609B636A24EE48A800773D6C /* Statistics.storyboard */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		609B637224EE4CB400773D6C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				609B636C24EE48AF00773D6C /* Settings.storyboard */,
+				60D3BAF51BC12D2000CAC7DE /* SettingsViewController.swift */,
+				60FED33F24EE66EB00979D21 /* SettingsWebViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		609B637324EE4DAF00773D6C /* CaffeineSliderView */ = {
+			isa = PBXGroup;
+			children = (
+				609B637424EE4DBB00773D6C /* CaffeineSliderView.swift */,
+				60FED33D24EE5F6E00979D21 /* SliderType.swift */,
+				60496F2C1BD015CE00A72757 /* CaffeineSlider.swift */,
+				60496F2A1BD011CA00A72757 /* SliderPopupView.swift */,
+				609B637624EE4E4B00773D6C /* CaffeineSliderView.xib */,
+			);
+			path = CaffeineSliderView;
+			sourceTree = "<group>";
+		};
 		60BE64AC24AF620D000F26C4 /* caffeineUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +456,7 @@
 		658C97C1AE0B060543CE9128 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60FED34124EE679B00979D21 /* WebKit.framework */,
 				602E64E41BAC3C6C00E25D52 /* HealthKit.framework */,
 				BA3B96DF380F91729B1B1847 /* Pods.framework */,
 				AC0D4BC68B85877491EC9915 /* Pods_caffeine.framework */,
@@ -535,16 +606,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				609B636724EE489A00773D6C /* Consumption.storyboard in Resources */,
 				6025626324BEF31600EF6054 /* Matchfile in Resources */,
 				600647E01BAE0A3D00101295 /* Size.plist in Resources */,
 				6043D1D324BEDFAD002608EB /* LaunchScreen.storyboard in Resources */,
+				609B637724EE4E4B00773D6C /* CaffeineSliderView.xib in Resources */,
 				600647DA1BAE0A0E00101295 /* Coffee.plist in Resources */,
 				6043D1CF24BEDF37002608EB /* Localizable.strings in Resources */,
 				600647DC1BAE0A1B00101295 /* Milk.plist in Resources */,
+				609B636924EE48A100773D6C /* Input.storyboard in Resources */,
 				6043D1D424BEDFAD002608EB /* Main.storyboard in Resources */,
+				609B636B24EE48A800773D6C /* Statistics.storyboard in Resources */,
 				600647DE1BAE0A2700101295 /* Sugar.plist in Resources */,
 				6043D1D724BEE000002608EB /* Assets.xcassets in Resources */,
 				6043D1B224BEDD07002608EB /* Podfile in Resources */,
+				609B636D24EE48AF00773D6C /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,35 +722,39 @@
 			files = (
 				60CA814824ADC45500DDED35 /* PersistenceService.swift in Sources */,
 				60CA813F24AC781100DDED35 /* CaffeineDataService.swift in Sources */,
+				609B637524EE4DBB00773D6C /* CaffeineSliderView.swift in Sources */,
 				6043D1DF24BEE03A002608EB /* Scenes.swift in Sources */,
-				600D1C381BE7C47C00DC9500 /* UICaffeineInputButtonView.swift in Sources */,
+				600D1C381BE7C47C00DC9500 /* CaffeineInputButtonView.swift in Sources */,
 				60CA814C24ADC4A700DDED35 /* ContextProvider.swift in Sources */,
 				603DEE0D24AB87030079A79C /* UserSettings.swift in Sources */,
-				601EB15A1C00CF9A00F56A2A /* UICaffeineConsumptionRecentButton.swift in Sources */,
+				601EB15A1C00CF9A00F56A2A /* RecentConsumptionButton.swift in Sources */,
 				6043D1E024BEE03A002608EB /* Segues.swift in Sources */,
 				6043D1DD24BEE03A002608EB /* Strings.swift in Sources */,
 				601FAA2C1BAC52E300553555 /* AppDelegate.swift in Sources */,
-				6062DFF11BDAA05E003EF136 /* UICaffeineInputButton.swift in Sources */,
+				6062DFF11BDAA05E003EF136 /* CaffeineInputButton.swift in Sources */,
 				603DEE0424AB7C640079A79C /* HealthStoreService.swift in Sources */,
 				60CA815024ADC59B00DDED35 /* ConsumptionDataProvider.swift in Sources */,
+				60FED34024EE66EB00979D21 /* SettingsWebViewController.swift in Sources */,
 				6043D1DE24BEE03A002608EB /* Assets.swift in Sources */,
 				60CA814E24ADC57500DDED35 /* ConsumptionStore.swift in Sources */,
 				60CA814A24ADC48B00DDED35 /* DatastoreProvider.swift in Sources */,
 				60CA814624ADC39D00DDED35 /* Consumption.xcdatamodeld in Sources */,
-				60E76D2B1BEA183300670CEA /* UICaffeineInputOKButton.swift in Sources */,
+				60E76D2B1BEA183300670CEA /* CaffeineInputOKButton.swift in Sources */,
 				601FAA2A1BAC52D200553555 /* ConsumptionViewController.swift in Sources */,
+				60FED33E24EE5F6E00979D21 /* SliderType.swift in Sources */,
 				601FAA291BAC52D200553555 /* InputViewController.swift in Sources */,
 				60481E1624AB71D8008DE168 /* CaffeineColors.swift in Sources */,
-				601336D11BF389E6006A67D3 /* UICaffeineStatisticsTimeSelectorView.swift in Sources */,
-				60496F2D1BD015CE00A72757 /* UICaffeineSlider.swift in Sources */,
+				601336D11BF389E6006A67D3 /* CaffeineStatisticsTimeSelector.swift in Sources */,
+				60496F2D1BD015CE00A72757 /* CaffeineSlider.swift in Sources */,
 				60D3BAF41BC12CC100CAC7DE /* StatisticsViewController.swift in Sources */,
 				60481E1924AB76C8008DE168 /* Consumable.swift in Sources */,
 				60CA814124ADC04800DDED35 /* DrinksService.swift in Sources */,
-				60496F2B1BD011CA00A72757 /* UISliderPopupView.swift in Sources */,
+				609B637924EE590E00773D6C /* NibLoadable.swift in Sources */,
+				60496F2B1BD011CA00A72757 /* SliderPopupView.swift in Sources */,
 				60481E1B24AB7860008DE168 /* ConsumableProperties.swift in Sources */,
 				60D3BAF61BC12D2000CAC7DE /* SettingsViewController.swift in Sources */,
 				60CA813D24AC6D8200DDED35 /* PeriodicConsumption.swift in Sources */,
-				60E76D2D1BEB608800670CEA /* UICaffeineStatisticsChartView.swift in Sources */,
+				60E76D2D1BEB608800670CEA /* CaffeineStatisticsChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -841,7 +921,7 @@
 				CODE_SIGN_ENTITLEMENTS = caffeine/caffeine.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development: Simon Krüger (ZHJYL9DGF3)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = T2MU43SWN2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
@@ -866,7 +946,7 @@
 				CODE_SIGN_ENTITLEMENTS = caffeine/caffeine.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: Simon Krüger (T2MU43SWN2)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = T2MU43SWN2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = caffeine/Info.plist;

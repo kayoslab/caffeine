@@ -10,19 +10,32 @@ extension UIColor {
     }
 }
 
-class UICaffeineInputOKButton: UIButton {
+@IBDesignable
+class CaffeineInputOKButton: UIButton {
+
+    @IBInspectable
+    var isSelectable: Bool {
+        didSet {
+            if isSelectable {
+                self.layer.borderColor = CaffeineColors.inputButton.color.cgColor
+                self.isEnabled = true
+            } else {
+                self.layer.borderColor = UIColor.lightGray.cgColor
+                self.isEnabled = false
+            }
+        }
+    }
 
     override init (frame: CGRect) {
+        isSelectable = false
         super.init(frame: frame)
 
         setUpView()
     }
 
-    convenience init () {
-        self.init(frame: CGRect.zero)
-    }
 
     required init?(coder aDecoder: NSCoder) {
+        isSelectable = false
         super.init(coder: aDecoder)
 
         setUpView()
@@ -36,17 +49,5 @@ class UICaffeineInputOKButton: UIButton {
         setTitleColor(CaffeineColors.inputButton.color, for: .highlighted)
         setBackgroundImage(UIColor.clear.image(), for: .disabled)
         setBackgroundImage(UIColor.clear.image(), for: .highlighted)
-
-        makeButtonNotSelectable()
-    }
-
-    internal func makeButtonSelectable() {
-        self.layer.borderColor = CaffeineColors.inputButton.color.cgColor
-        self.isEnabled = true
-    }
-
-    internal func makeButtonNotSelectable() {
-        self.layer.borderColor = UIColor.lightGray.cgColor
-        self.isEnabled = false
     }
 }
