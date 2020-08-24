@@ -1,0 +1,68 @@
+// App Strings
+"ConsumptionTitle" = "A nice hot cup of coffee";
+
+// Modell Strings
+"SensibilityAlertTitle" = "Sensibility Updated";
+"SensibilityAlertBody" = "Please check your statistics and upate your personal data.";
+"LoadAgeError" = "An Error occurd during Age loading. Please check your Health authorizations!";
+
+// Shortcut Allert
+"ShortcutHeading" = "Coffee Saved!";
+"ShortcutText" = "We updated your Statistics. Take a look.";
+"ShortcutOK" = "OK";
+
+// Days
+"Monday" = "MO";
+"Tuesday" = "TU";
+"Wednesday" = "WE";
+"Thursday" = "TH";
+"Friday" = "FR";
+"Saturday" = "SA";
+"Sunday" = "SU";
+
+// Months
+"January" = "JAN";
+"February" = "FEB";
+"March" = "MAR";
+"April" = "APR";
+"May" = "MAY";
+"June" = "JUNE";
+"July" = "JULY";
+"August" = "AUG";
+"September" = "SEPT";
+"October" = "OCT";
+"November" = "NOV";
+"December" = "DEC";
+
+// Shots
+"noshot" = "No Coffee";
+"singleshot" = "1 Shot";
+"doubleshot" = "2 Shots";
+"tripleshot" = "3 Shots";
+
+// Milk
+"black" = "No Milk";
+"lactosefree" = "Lactose Free";
+"fullfat" = "Whole Milk";
+"soymilk" = "Soy Milk";
+
+// Size
+"nosize" = "Espresso Cup";
+"small" = "Small Cup";
+"medium" = "Medium Cup";
+"large" = "Large Cup";
+
+// Sugar
+"nosugar" = "No Sugar";
+"singlepiece" = "1 Sugar";
+"twopiece" = "2 Sugar";
+"threepiece" = "3 Sugar";
+
+"SettingsTitleWeight" = "Weight in kg:";
+"SettingsTitleHeight" = "Height in cm:";
+"SettingsTitleSensibility" = "Sensibility in %%:";
+"SettingsTitleSex" = "Sex:";
+"SettingsMedicalInformation" = "Medical Information!";
+
+"SettingsMale" = "Male";
+"SettingsFemale" = "Female";

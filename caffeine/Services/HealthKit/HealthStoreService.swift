@@ -32,7 +32,7 @@ class HealthStoreService {
         HealthStoreService.shared.healthStore.requestAuthorization(
             toShare: writeDataTypes,
             read: readDataTypes
-        ) { [weak self] (success, error) in
+        ) { [weak self] success, error in
             guard success else {
                 print("You didn't allow HealthKit to access these read/write data types.")
                 print("In your app, try to handle this error gracefully when a user decides not to provide access.")
@@ -62,7 +62,7 @@ class HealthStoreService {
 
             UserSettings.userAge = age
         } catch {
-            print(NSLocalizedString("LoadAgeError", comment: "Something went wrong!"))
+            print(error.localizedDescription)
         }
     }
 
@@ -139,7 +139,7 @@ class HealthStoreService {
             predicate: predicate,
             limit: 0,
             sortDescriptors: [timeSortDescriptor],
-            resultsHandler: { (_, result, error) in
+            resultsHandler: { _, result, error in
                 guard error == nil, let result = result else {
                     return completion(false, [])
                 }

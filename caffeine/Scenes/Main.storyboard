@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="a2i-bk-1hb" kind="relationship" relationship="viewControllers" id="xP7-ad-OSI"/>
+                        <segue destination="Bl7-gC-fbV" kind="relationship" relationship="viewControllers" id="4bz-6e-Xoh"/>
+                        <segue destination="aGd-z9-Kta" kind="relationship" relationship="viewControllers" id="RKr-Ss-cUw"/>
+                        <segue destination="Yam-9M-LZJ" kind="relationship" relationship="viewControllers" id="NHZ-EG-i6e"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34" y="0.0"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="CEI-VN-rPX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="Yam-9M-LZJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="3" title="Settings" image="settings" landscapeImage="settings" id="AKa-5v-fWf">
+                        <color key="badgeColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WCx-XG-ra1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="44"/>
+        </scene>
+        <!--Statistics-->
+        <scene sceneID="LZI-3J-WJk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Statistics" id="aGd-z9-Kta" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" title="Statistics" image="statistics" landscapeImage="statistics" id="Rm6-pt-eBB">
+                        <color key="badgeColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ntR-jf-NLw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="13"/>
+        </scene>
+        <!--Input-->
+        <scene sceneID="YqM-1W-8Bk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Input" id="Bl7-gC-fbV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="Input" image="input" landscapeImage="input" id="mMc-QP-5i8">
+                        <color key="badgeColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r94-5K-7sG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="-15"/>
+        </scene>
+        <!--Consumption-->
+        <scene sceneID="IKc-Wq-H9X">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Consumption" id="a2i-bk-1hb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Consumption" image="consumption" landscapeImage="consumption" id="ik0-d9-UZw">
+                        <color key="badgeColor" red="0.18823529410000001" green="0.18823529410000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efg-xP-KUN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="-44"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="consumption" width="25" height="25"/>
+        <image name="input" width="25" height="25"/>
+        <image name="settings" width="25" height="25"/>
+        <image name="statistics" width="25" height="25"/>
+    </resources>
+</document>

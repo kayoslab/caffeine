@@ -39,12 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     internal var window: UIWindow?
 
     /// A storage provider to be accessed by core data relevant classes.
-    lazy internal var datastoreProvider: DatastoreProvider = {
+    internal lazy var datastoreProvider: DatastoreProvider = {
         return DatastoreProvider()
     }()
 
     /// A context provider to be accessed by core data relevant classes.
-    lazy internal var contextProvider: ContextProvider = {
+    internal lazy var contextProvider: ContextProvider = {
         return ContextProvider(with: datastoreProvider)
     }()
 
@@ -71,18 +71,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let shortcutItem = ShortcutItem(rawValue: shortcutItem.type) else { return false }
 
         let alertController = UIAlertController(
-            title: "\(NSLocalizedString("ShortcutHeading", comment: ""))",
-            message: NSLocalizedString("ShortcutText", comment: ""),
+            title: L10n.shortcutHeading,
+            message: L10n.shortcutText,
             preferredStyle: .alert
         )
         let okAction = UIAlertAction(
-            title: NSLocalizedString("ShortcutOK", comment: ""),
+            title: L10n.shortcutOK,
             style: .default,
             handler: nil
         )
         alertController.addAction(okAction)
 
-        DrinksService.shared.drink(shortcutItem.consumable)
+        // Store the drink with a new date.
+        DrinksService.shared.drink(
+            .init(
+                coffee: shortcutItem.consumable.coffee,
+                milk: shortcutItem.consumable.milk,
+                size: shortcutItem.consumable.size,
+                sugar: shortcutItem.consumable.sugar,
+                date: .init()
+            )
+        )
         window?.rootViewController?.present(
             alertController,
             animated: true,

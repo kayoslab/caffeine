@@ -1,0 +1,18 @@
+strings:
+  inputs: caffeine/Localization/en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: caffeine/Generated/Strings.swift
+xcassets:
+  inputs:
+    - caffeine/Resources/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: caffeine/Generated/Assets.swift
+ib:
+    inputs: caffeine/ViewController
+    outputs:
+        - templateName: scenes-swift5
+          output: caffeine/Generated/Scenes.swift
+        - templateName: segues-swift5
+          output: caffeine/Generated/Segues.swift

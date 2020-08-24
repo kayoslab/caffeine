@@ -1,0 +1,68 @@
+// App Strings
+"ConsumptionTitle" = "Eine schöne heiße Tasse Kaffee.";
+
+// Modell Strings
+"SensibilityAlertTitle" = "Empfindlichkeit aktualisiert";
+"SensibilityAlertBody" = "Bitte überprüf deine Statistik und passe deine persönlichen Daten an.";
+"LoadAgeError" = "Während des Ladeprozesses ist ein Fehler aufgetreten. Bitte überprüf deine Health Berechtigungen!";
+
+// Shortcut Allert
+"ShortcutHeading" = "Kaffee gespeichert!";
+"ShortcutText" = "Deine Statistik wurde aktualisiert. Schau mal rein.";
+"ShortcutOK" = "OK";
+
+// Days
+"Monday" = "MO";
+"Tuesday" = "DI";
+"Wednesday" = "MI";
+"Thursday" = "DO";
+"Friday" = "FR";
+"Saturday" = "SA";
+"Sunday" = "SO";
+
+// Months
+"January" = "JAN";
+"February" = "FEB";
+"March" = "MÄR";
+"April" = "APR";
+"May" = "MAI";
+"June" = "JUNI";
+"July" = "JULI";
+"August" = "AUG";
+"September" = "SEPT";
+"October" = "OKT";
+"November" = "NOV";
+"December" = "DEZ";
+
+// Shots
+"noshot" = "Kein Kaffee";
+"singleshot" = "1 Shot";
+"doubleshot" = "2 Shots";
+"tripleshot" = "3 Shots";
+
+// Milk
+"black" = "Keine Milch";
+"lactosefree" = "Laktosefrei";
+"fullfat" = "Vollmilch";
+"soymilk" = "Sojamilch";
+
+// Size
+"nosize" = "Espresso Tasse";
+"small" = "Kleine Tasse";
+"medium" = "Mittlere Tasse";
+"large" = "Große Tasse";
+
+// Sugar
+"nosugar" = "Kein Zucker";
+"singlepiece" = "1 Zucker";
+"twopiece" = "2 Zucker";
+"threepiece" = "3 Zucker";
+
+"SettingsTitleWeight" = "Gewicht in kg:";
+"SettingsTitleHeight" = "Größe in cm:";
+"SettingsTitleSensibility" = "Sensibilität in %%:";
+"SettingsTitleSex" = "Geschlecht:";
+"SettingsMedicalInformation" = "Medizinische Informationen!";
+
+"SettingsMale" = "Männlich";
+"SettingsFemale" = "Weiblich";

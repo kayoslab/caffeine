@@ -52,7 +52,7 @@ class CaffeineDataService {
         completion: @escaping (Bool, Double?) -> Void
     ) {
         var caffeine: Double = 0.0
-        HealthStoreService.shared.loadConsumedData(for: period) { (success, data) in
+        HealthStoreService.shared.loadConsumedData(for: period) { success, data in
             guard success else {
                 return completion(false, nil)
             }
@@ -95,7 +95,7 @@ class CaffeineDataService {
         _ completion: @escaping (Bool, Double?) -> Void
     ) {
         // TODO: Migrate to coredata based information
-        HealthStoreService.shared.loadConsumedData(for: .day) { [weak self] (success, data) in
+        HealthStoreService.shared.loadConsumedData(for: .day) { [weak self] success, data in
             guard success else {
                 return completion(false, nil)
             }
@@ -124,7 +124,7 @@ class CaffeineDataService {
                 var sensibility: Double = 0.0
                 var sensibilityByValue: Double = 0.0
 
-                if (isSensible) {
+                if isSensible {
                     sensibility = (Double(UserSettings.userSensibility) - 50.0) / 100.0
                     sensibilityByValue = (0.0019 * caffeineInQuantity + 2.63) *
                         (1.0 - sensibility)
@@ -134,7 +134,7 @@ class CaffeineDataService {
                         (1.0 - sensibility)
                 }
 
-                halfLifeSeconds = halfLifeSeconds + sensibilityByValue
+                halfLifeSeconds += sensibilityByValue
                 sensibility = Double(UserSettings.userSensibility) / 100.0
 
                 let expectedGenderValue: Double = Double(UserSettings.userSex) / 100.0
@@ -154,7 +154,7 @@ class CaffeineDataService {
                 let elapsedTime = Date().timeIntervalSince(quantitySample.startDate)
                 let caffeineConcentrationOfSample = quantity.doubleValue(for: caffeineUnit) *
                     pow(0.5, (elapsedTime / halfLifeSeconds))
-                caffeine = caffeine + caffeineConcentrationOfSample
+                caffeine += caffeineConcentrationOfSample
             }
 
             completion(true, caffeine)
