@@ -921,7 +921,7 @@
 				CODE_SIGN_ENTITLEMENTS = caffeine/caffeine.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development: Simon Krüger (ZHJYL9DGF3)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = T2MU43SWN2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
@@ -946,7 +946,7 @@
 				CODE_SIGN_ENTITLEMENTS = caffeine/caffeine.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: Simon Krüger (T2MU43SWN2)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = T2MU43SWN2;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = caffeine/Info.plist;
