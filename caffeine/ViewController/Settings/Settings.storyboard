@@ -123,7 +123,7 @@
                                                                     </mask>
                                                                 </variation>
                                                                 <connections>
-                                                                    <segue destination="SzE-bs-qCh" kind="show" id="OxT-WF-ynr"/>
+                                                                    <action selector="didPressInfoButton" destination="L3q-1B-75g" eventType="touchUpInside" id="P1Q-gp-2MS"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -181,16 +181,15 @@
         <!--Settings Web View Controller-->
         <scene sceneID="Xl8-hE-FYN">
             <objects>
-                <viewController id="SzE-bs-qCh" customClass="SettingsWebViewController" customModule="caffeine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsWebViewController" id="SzE-bs-qCh" customClass="SettingsWebViewController" customModule="caffeine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e3G-Pn-2CD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" customUserAgent="app-caffeine" translatesAutoresizingMaskIntoConstraints="NO" id="lXK-1R-Dmd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
-                                <color key="backgroundColor" red="0.12943631410000001" green="0.12935084099999999" blue="0.13333395119999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <wkWebViewConfiguration key="configuration" allowsAirPlayForMediaPlayback="NO" allowsPictureInPictureMediaPlayback="NO" applicationNameForUserAgent="caffeine">
-                                    <dataDetectorTypes key="dataDetectorTypes"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUR-qa-GBP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
@@ -198,16 +197,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.12943631410000001" green="0.12935084099999999" blue="0.13333395119999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="lXK-1R-Dmd" firstAttribute="top" secondItem="j8h-wh-BoV" secondAttribute="top" id="V5h-uD-bv2"/>
-                            <constraint firstItem="lXK-1R-Dmd" firstAttribute="trailing" secondItem="j8h-wh-BoV" secondAttribute="trailing" id="n9m-Kc-WVR"/>
-                            <constraint firstItem="lXK-1R-Dmd" firstAttribute="bottom" secondItem="j8h-wh-BoV" secondAttribute="bottom" id="rLN-Te-Xa0"/>
-                            <constraint firstItem="lXK-1R-Dmd" firstAttribute="leading" secondItem="j8h-wh-BoV" secondAttribute="leading" id="xrr-CX-Phx"/>
+                            <constraint firstItem="iUR-qa-GBP" firstAttribute="top" secondItem="j8h-wh-BoV" secondAttribute="top" id="8FM-XM-eYP"/>
+                            <constraint firstItem="j8h-wh-BoV" firstAttribute="bottom" secondItem="iUR-qa-GBP" secondAttribute="bottom" id="d8h-cA-Sxs"/>
+                            <constraint firstItem="j8h-wh-BoV" firstAttribute="trailing" secondItem="iUR-qa-GBP" secondAttribute="trailing" id="ejW-6z-5Yd"/>
+                            <constraint firstItem="iUR-qa-GBP" firstAttribute="leading" secondItem="j8h-wh-BoV" secondAttribute="leading" id="vej-2k-IRK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="j8h-wh-BoV"/>
                     </view>
                     <navigationItem key="navigationItem" id="msr-0f-Eg4"/>
                     <connections>
-                        <outlet property="webView" destination="lXK-1R-Dmd" id="XBE-cF-jv5"/>
+                        <outlet property="webView" destination="iUR-qa-GBP" id="pIY-4c-7Cd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFH-qE-B3M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -12,15 +12,27 @@ import UIKit
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
 internal enum StoryboardScene {
-  internal enum LaunchScreen: StoryboardType {
-    internal static let storyboardName = "LaunchScreen"
+  internal enum Consumption: StoryboardType {
+    internal static let storyboardName = "Consumption"
 
-    internal static let initialScene = InitialSceneType<UIKit.UIViewController>(storyboard: LaunchScreen.self)
+    internal static let initialScene = InitialSceneType<UIKit.UINavigationController>(storyboard: Consumption.self)
   }
-  internal enum Main: StoryboardType {
-    internal static let storyboardName = "Main"
+  internal enum Input: StoryboardType {
+    internal static let storyboardName = "Input"
 
-    internal static let initialScene = InitialSceneType<UIKit.UITabBarController>(storyboard: Main.self)
+    internal static let initialScene = InitialSceneType<UIKit.UINavigationController>(storyboard: Input.self)
+  }
+  internal enum Settings: StoryboardType {
+    internal static let storyboardName = "Settings"
+
+    internal static let initialScene = InitialSceneType<UIKit.UINavigationController>(storyboard: Settings.self)
+
+    internal static let settingsWebViewController = SceneType<caffeine.SettingsWebViewController>(storyboard: Settings.self, identifier: "SettingsWebViewController")
+  }
+  internal enum Statistics: StoryboardType {
+    internal static let storyboardName = "Statistics"
+
+    internal static let initialScene = InitialSceneType<UIKit.UINavigationController>(storyboard: Statistics.self)
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
