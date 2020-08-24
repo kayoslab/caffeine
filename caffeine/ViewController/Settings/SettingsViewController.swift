@@ -46,4 +46,11 @@ class SettingsViewController: UIViewController {
             animated: animated
         )
     }
+
+    @IBAction private func didPressInfoButton() {
+        guard let url = URL(string: "https://caffeine.cr0ss.org/medical-information/") else { return }
+        let webViewController = StoryboardScene.Settings.settingsWebViewController.instantiate()
+        webViewController.url = url
+        navigationController?.pushViewController(webViewController, animated: true)
+    }
 }
